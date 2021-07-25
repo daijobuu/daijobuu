@@ -1,0 +1,45 @@
+:root{
+    --light_black:hsl(0, 0%, 12%);
+    --sky_blueish:hsl(187, 86%, 53%);
+    --light_white:hsl(255, 0%, 85%);
+    --extra_black_font:'Montserrat', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    background: var(--light_black);
+    font-family: var(--extra_black_font);
+    color: var(--light_white);
+    
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+}
+
+.heading{
+    font-size: 3rem;
+    color: transparent;
+}
+
+.rainbow_text_animation{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff );
+    background-clip: text;
+    background-size: 300% 200%;
+    animation: rainbow_animation 10s ease-in infinite;
+}
+
+
+@keyframes rainbow_animation{
+    0%,100%{
+        background-position: 0 0%;
+    }
+
+    50%{
+        background-position: 100% 100%;
+    }
+}
