@@ -28,6 +28,7 @@ body{
 
 .rainbow_text_animation{
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff );
+    -webkit-background-clip: text;
     background-clip: text;
     background-size: 300% 200%;
     animation: rainbow_animation 10s ease-in infinite;
