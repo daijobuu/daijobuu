@@ -22,25 +22,39 @@ body{
 }
 
 .heading{
-    font-size: 4.5vw;
+    position: relative;
+    font-size: 6vw;
+}
+.heading h2{
+    position: absolute;
+    transform: translate(-45%, -100%);
+}
+
+.heading h2:nth-child(1){
     color: transparent;
 }
 
+.heading h2:nth-child(2){
+    color:rgba(255, 255, 255, 0.18);
+}
+
 .rainbow_text_animation{
-    background: linear-gradient(135deg, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff );
+    background-image: linear-gradient(135deg, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff );
     -webkit-background-clip: text;
     background-clip: text;
     background-size: 800% 200%;
-    animation: rainbow_animation 10s ease-in infinite;
+    animation: rainbow_animation 10s ease-in-out infinite;
 }
 
 
 @keyframes rainbow_animation{
     0%,100%{
         background-position: 0 0%;
+        clip-path: polygon(0% 12%, 3% 13%, 7% 16%, 13% 19%, 16% 25%, 22% 31%, 29% 39%, 39% 41%, 49% 41%, 59% 37%, 68% 31%, 77% 25%, 85% 19%, 92% 16%, 97% 16%, 100% 20%, 100% 100%, 0 100%);
     }
-
+    
     50%{
         background-position: 100% 100%;
+        clip-path: polygon(0 33%, 6% 35%, 11% 39%, 16% 42%, 22% 40%, 28% 26%, 33% 17%, 40% 12%, 46% 9%, 52% 11%, 62% 25%, 68% 33%, 76% 37%, 85% 35%, 93% 26%, 100% 12%, 100% 100%, 0 100%);
     }
 }
